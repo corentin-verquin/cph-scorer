@@ -1,0 +1,14 @@
+ls:
+    packages/api/src:
+        .ts: kebabcase
+        .module.ts: kebabcase
+        .service.ts: kebabcase
+        .controler.ts: kebabcase
+
+    packages/client/src:
+        .js: kebabcase
+        .scss: regex:^(_?[a-z\d]*)(-[a-z\d]+)*$
+        .pug: kebabcase
+
+ignore:
+    - node_modules
