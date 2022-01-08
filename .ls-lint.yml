@@ -6,6 +6,7 @@ ls:
         .controler.ts: kebabcase
         .config.ts: kebabcase
         .entity.ts: kebabcase
+        .provider.ts: kebabcase
         .d.ts: kebabcase
 
     packages/client/src:
