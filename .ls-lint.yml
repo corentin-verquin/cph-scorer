@@ -4,6 +4,9 @@ ls:
         .module.ts: kebabcase
         .service.ts: kebabcase
         .controler.ts: kebabcase
+        .config.ts: kebabcase
+        .entity.ts: kebabcase
+        .d.ts: kebabcase
 
     packages/client/src:
         .js: kebabcase
