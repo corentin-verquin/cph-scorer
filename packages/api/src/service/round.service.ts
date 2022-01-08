@@ -1,13 +1,15 @@
-import { RoundProvider } from "provider";
-import { Round } from "model";
-import { Repository } from "typeorm";
-import { RoundEntity } from "model";
-import { Injectable } from "@nestjs/common";
-import { InjectRepository } from "@nestjs/typeorm";
+import { RoundProvider } from 'provider';
+import { Round, RoundEntity } from 'model';
+import { Repository } from 'typeorm';
+import { Injectable } from '@nestjs/common';
+import { InjectRepository } from '@nestjs/typeorm';
 
 @Injectable()
 export class RoundService implements RoundProvider {
-  constructor(@InjectRepository(RoundEntity) private readonly roundRepository: Repository<RoundEntity>) {}
+  constructor(
+    @InjectRepository(RoundEntity)
+    private readonly roundRepository: Repository<RoundEntity>,
+  ) {}
 
   public async insert(roundNumber: number): Promise<Round> {
     const round = new RoundEntity();
@@ -19,11 +21,11 @@ export class RoundService implements RoundProvider {
     return (
       await this.roundRepository.findOneOrFail({
         relations: [
-          "matchs",
-          "matchs.teamOne",
-          "matchs.teamOne.players",
-          "matchs.teamTwo",
-          "matchs.teamTwo.players",
+          'matchs',
+          'matchs.teamOne',
+          'matchs.teamOne.players',
+          'matchs.teamTwo',
+          'matchs.teamTwo.players',
         ],
         where: { roundNumber },
       })
