@@ -1,4 +1,4 @@
-import { Player, RankingType } from 'model';
+import { Player, RankingType } from '../../model';
 
 export class Ranking {
   public id: uuid;

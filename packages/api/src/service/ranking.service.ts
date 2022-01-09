@@ -1,4 +1,4 @@
-import { RankingProvider } from 'provider';
+import { RankingProvider } from '../provider';
 import { Repository } from 'typeorm';
 import {
   RankingEntity,
@@ -6,7 +6,7 @@ import {
   Ranking,
   Player,
   PlayerEntity,
-} from 'model';
+} from '../model';
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 

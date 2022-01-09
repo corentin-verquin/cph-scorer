@@ -1,5 +1,5 @@
-import { RankingProvider, TeamProvider } from 'provider';
-import { Match, Player, RankingType, Team } from 'model';
+import { RankingProvider, TeamProvider } from '../provider';
+import { Match, Player, RankingType, Team } from '../model';
 
 export class UpdateScore {
   constructor(

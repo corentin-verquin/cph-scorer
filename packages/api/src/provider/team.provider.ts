@@ -1,4 +1,4 @@
-import { Player, Team } from 'model';
+import { Player, Team } from '../model';
 
 export interface TeamProvider {
   insert: (players: Player[]) => Promise<Team>;

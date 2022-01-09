@@ -1,4 +1,4 @@
-import { Convertor, ModelConverter } from 'helper/model-converter';
+import { Convertor, ModelConverter } from '../../helper/model-converter';
 import {
   Entity,
   PrimaryGeneratedColumn,
@@ -6,7 +6,7 @@ import {
   ManyToMany,
   JoinTable,
 } from 'typeorm';
-import { PlayerEntity, Team } from 'model';
+import { PlayerEntity, Team } from '../../model';
 
 @Entity({ name: 'team' })
 @Convertor(Team, TeamEntity)

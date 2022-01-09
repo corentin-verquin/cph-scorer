@@ -1,4 +1,4 @@
-import { TeamProvider, PlayerProvider, RoundProvider } from 'provider';
+import { TeamProvider, PlayerProvider, RoundProvider } from '../provider';
 
 export class Reset {
   constructor(

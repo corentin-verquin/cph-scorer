@@ -1,4 +1,4 @@
-import { Player } from 'model';
+import { Player } from '../../model';
 
 export class Team {
   public id: uuid;

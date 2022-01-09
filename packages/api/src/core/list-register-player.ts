@@ -1,5 +1,5 @@
-import { PlayerProvider } from 'provider';
-import { Player } from 'model';
+import { PlayerProvider } from '../provider';
+import { Player } from '../model';
 
 export class ListRegisterPlayer {
   constructor(private readonly listRegisterPlayer: PlayerProvider) {}

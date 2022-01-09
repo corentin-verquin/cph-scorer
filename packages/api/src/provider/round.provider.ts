@@ -1,4 +1,4 @@
-import { Round } from 'model';
+import { Round } from '../model';
 
 export interface RoundProvider {
   insert: (roundNumber: number) => Promise<Round>;

@@ -1,8 +1,8 @@
 import { INestApplication, Logger, ValidationPipe } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
-import configuration from 'app/app.config';
-import { AppModule } from 'app/app.module';
+import configuration from './app/app.config';
+import { AppModule } from './app/app.module';
 
 const logger = new Logger('Application');
 

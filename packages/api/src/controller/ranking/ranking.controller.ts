@@ -1,10 +1,10 @@
 import { Controller, Get, Param } from '@nestjs/common';
 import { ApiOkResponse, ApiTags } from '@nestjs/swagger';
-import { GetRanking } from 'core/get-ranking';
-import { RankingDTO } from 'helper/DTO/ranking.dto';
-import { TypeDTO } from 'helper/DTO/type.dto';
-import { Ranking } from 'model';
-import { RankingService } from 'service';
+import { GetRanking } from '../../core/get-ranking';
+import { RankingDTO } from '../../helper/DTO/ranking.dto';
+import { TypeDTO } from '../../helper/DTO/type.dto';
+import { Ranking } from '../../model';
+import { RankingService } from '../../service';
 
 @Controller('ranking')
 @ApiTags('Tournament')

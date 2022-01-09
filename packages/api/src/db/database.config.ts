@@ -5,8 +5,8 @@ import {
   MatchEntity,
   RoundEntity,
   RankingEntity,
-} from 'model';
-import configuration from 'app/app.config';
+} from '../model';
+import configuration from '../app/app.config';
 
 const config: TypeOrmModuleOptions = {
   type: 'postgres',

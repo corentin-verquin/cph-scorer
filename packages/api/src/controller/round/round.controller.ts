@@ -13,7 +13,7 @@ import {
   RoundService,
   TeamService,
   MatchService,
-} from 'service';
+} from '../../service';
 import {
   ApiConflictResponse,
   ApiCreatedResponse,
@@ -22,10 +22,10 @@ import {
   ApiTags,
 } from '@nestjs/swagger';
 import { EntityNotFoundError } from 'typeorm';
-import { GenerateRound } from 'core/generate-round';
-import { MaxCallError } from 'error';
-import { RoundDTO } from 'helper/DTO/round.dto';
-import { GetRound } from 'core/get-round';
+import { GenerateRound } from '../../core/generate-round';
+import { MaxCallError } from '../../error';
+import { RoundDTO } from '../../helper/DTO/round.dto';
+import { GetRound } from '../../core/get-round';
 
 @Controller('round')
 @ApiTags('Tournament')

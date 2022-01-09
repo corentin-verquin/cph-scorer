@@ -1,5 +1,5 @@
-import { RoundProvider } from 'provider';
-import { Round, RoundEntity } from 'model';
+import { RoundProvider } from '../provider';
+import { Round, RoundEntity } from '../model';
 import { Repository } from 'typeorm';
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';

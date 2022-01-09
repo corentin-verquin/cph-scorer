@@ -1,4 +1,4 @@
-import { RankingType } from 'model';
+import { RankingType } from '../../model';
 import { ApiProperty } from '@nestjs/swagger';
 import { IsNotEmpty, IsUUID, IsEnum } from 'class-validator';
 

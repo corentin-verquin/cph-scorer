@@ -1,4 +1,4 @@
-import { Match } from 'model';
+import { Match } from '../../model';
 
 export class Round {
   public id: uuid;

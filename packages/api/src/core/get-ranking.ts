@@ -1,5 +1,5 @@
-import { RankingProvider } from 'provider';
-import { RankingType, Ranking } from 'model';
+import { RankingProvider } from '../provider';
+import { RankingType, Ranking } from '../model';
 
 export class GetRanking {
   constructor(private readonly rankingProvider: RankingProvider) {}

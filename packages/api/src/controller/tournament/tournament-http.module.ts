@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
-import { PlayerModule } from 'module/player.module';
-import { RoundModule } from 'module/round.module';
-import { TeamModule } from 'module/team.module';
+import { PlayerModule } from '../../module/player.module';
+import { RoundModule } from '../../module/round.module';
+import { TeamModule } from '../../module/team.module';
 import { TournamentController } from './tournament.controller';
 
 @Module({

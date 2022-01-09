@@ -1,6 +1,6 @@
-import { Convertor, ModelConverter } from 'helper/model-converter';
+import { Convertor, ModelConverter } from '../../helper/model-converter';
 import { PrimaryGeneratedColumn, Column, OneToMany, Entity } from 'typeorm';
-import { MatchEntity, Round } from 'model';
+import { MatchEntity, Round } from '../../model';
 
 @Entity({ name: 'round' })
 @Convertor(Round, RoundEntity)

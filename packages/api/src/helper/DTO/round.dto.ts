@@ -1,4 +1,4 @@
-import { Round } from 'model';
+import { Round } from '../../model';
 import { ApiProperty } from '@nestjs/swagger';
 import { IsNotEmpty, IsNumber, IsPositive, IsUUID } from 'class-validator';
 import { MatchDTO } from './match.dto';

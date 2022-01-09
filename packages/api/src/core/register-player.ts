@@ -1,6 +1,6 @@
-import { PlayerProvider, RankingProvider } from 'provider';
-import { RankingType, Ranking, Player } from 'model';
-import { PlayerUnknowException } from 'error';
+import { PlayerProvider, RankingProvider } from '../provider';
+import { RankingType, Ranking, Player } from '../model';
+import { PlayerUnknowException } from '../error';
 
 export class RegisterPlayer {
   constructor(

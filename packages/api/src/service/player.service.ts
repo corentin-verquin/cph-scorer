@@ -1,6 +1,6 @@
 import { Repository } from 'typeorm';
-import { PlayerEntity, Player } from 'model';
-import { PlayerProvider } from 'provider';
+import { PlayerEntity, Player } from '../model';
+import { PlayerProvider } from '../provider';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Injectable } from '@nestjs/common';
 

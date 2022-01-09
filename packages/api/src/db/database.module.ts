@@ -4,7 +4,7 @@ import {
   MatchEntity,
   TeamEntity,
   RoundEntity,
-} from 'model';
+} from '../model';
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 

@@ -1,4 +1,4 @@
-import { Team } from 'model';
+import { Team } from '../../model';
 import { ApiProperty } from '@nestjs/swagger';
 import { IsNotEmpty, IsNumber, IsPositive, Max } from 'class-validator';
 import { PlayerDTO } from './player.dto';

@@ -1,4 +1,4 @@
-import { Round, Team } from 'model';
+import { Round, Team } from '../../model';
 
 export class Match {
   public id: uuid;

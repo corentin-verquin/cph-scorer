@@ -1,4 +1,4 @@
-import { Match } from 'model';
+import { Match } from '../../model';
 import { ApiProperty } from '@nestjs/swagger';
 import { IsNotEmpty, IsUUID } from 'class-validator';
 import { TeamDTO } from './team.dto';

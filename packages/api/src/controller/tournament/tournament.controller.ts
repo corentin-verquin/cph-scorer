@@ -1,7 +1,7 @@
-import { Reset } from 'core/reset';
+import { Reset } from '../../core/reset';
 import { Controller, Delete, HttpCode } from '@nestjs/common';
 import { ApiNoContentResponse, ApiTags } from '@nestjs/swagger';
-import { RoundService, PlayerService, TeamService } from 'service';
+import { RoundService, PlayerService, TeamService } from '../../service';
 
 @ApiTags('Tournament')
 @Controller('tournament')

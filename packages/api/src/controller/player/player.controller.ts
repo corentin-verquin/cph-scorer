@@ -9,7 +9,7 @@ import {
   Post,
   Put,
 } from '@nestjs/common';
-import { RankingService, PlayerService } from 'service';
+import { RankingService, PlayerService } from '../../service';
 import {
   ApiCreatedResponse,
   ApiNoContentResponse,
@@ -17,16 +17,16 @@ import {
   ApiOkResponse,
   ApiTags,
 } from '@nestjs/swagger';
-import { ListPlayer } from 'core/list-player';
-import { ListRegisterPlayer } from 'core/list-register-player';
-import { AddPlayer } from 'core/add-player';
-import { UpdatePlayer } from 'core/update-player';
-import { RegisterPlayer } from 'core/register-player';
-import { PlayerUnknowException } from 'error';
-import { PlayerDTO } from 'helper/DTO/player.dto';
-import { UpdateInsertPlayerDto } from 'helper/DTO/update-insert.dto';
-import { RegisterPlayerDto } from 'helper/DTO/register-player.dto';
-import { UUIDDTO } from 'helper/DTO/uuid.dto';
+import { ListPlayer } from '../../core/list-player';
+import { ListRegisterPlayer } from '../../core/list-register-player';
+import { AddPlayer } from '../../core/add-player';
+import { UpdatePlayer } from '../../core/update-player';
+import { RegisterPlayer } from '../../core/register-player';
+import { PlayerUnknowException } from '../../error';
+import { PlayerDTO } from '../../helper/DTO/player.dto';
+import { UpdateInsertPlayerDto } from '../../helper/DTO/update-insert.dto';
+import { RegisterPlayerDto } from '../../helper/DTO/register-player.dto';
+import { UUIDDTO } from '../../helper/DTO/uuid.dto';
 
 @ApiTags('Player')
 @Controller('player')

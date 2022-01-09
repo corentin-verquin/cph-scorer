@@ -1,4 +1,4 @@
-import { MatchProvider } from 'provider';
+import { MatchProvider } from '../provider';
 import {
   Team,
   Round,
@@ -6,7 +6,7 @@ import {
   MatchEntity,
   RoundEntity,
   TeamEntity,
-} from 'model';
+} from '../model';
 import { Repository } from 'typeorm';
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';

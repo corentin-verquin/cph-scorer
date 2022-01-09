@@ -1,4 +1,4 @@
-import { RankingType, Ranking, Player } from 'model';
+import { RankingType, Ranking, Player } from '../model';
 
 export interface RankingProvider {
   findRanking: (id: uuid, type: RankingType) => Promise<Ranking | null>;

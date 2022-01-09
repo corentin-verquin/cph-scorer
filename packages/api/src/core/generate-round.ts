@@ -1,14 +1,14 @@
 import { chain, chunk, intersection, flatten } from 'lodash';
 import { Observable, lastValueFrom } from 'rxjs';
 import { retry } from 'rxjs/operators';
-import { Player, Team } from 'model';
+import { Player, Team } from '../model';
 import {
   PlayerProvider,
   RoundProvider,
   TeamProvider,
   MatchProvider,
-} from 'provider';
-import { MaxCallError } from 'error';
+} from '../provider';
+import { MaxCallError } from '../error';
 
 export class GenerateRound {
   constructor(

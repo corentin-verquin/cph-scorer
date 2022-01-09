@@ -1,4 +1,4 @@
-import { Ranking, RankingType } from 'model';
+import { Ranking, RankingType } from '../../model';
 import { ApiProperty } from '@nestjs/swagger';
 import { PlayerDTO } from './player.dto';
 

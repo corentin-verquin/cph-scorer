@@ -1,5 +1,5 @@
-import { TeamProvider } from 'provider';
-import { Player, Team, PlayerEntity, TeamEntity } from 'model';
+import { TeamProvider } from '../provider';
+import { Player, Team, PlayerEntity, TeamEntity } from '../model';
 import { Repository } from 'typeorm';
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';

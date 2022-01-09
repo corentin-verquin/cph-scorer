@@ -1,6 +1,6 @@
-import { Convertor, ModelConverter } from 'helper/model-converter';
+import { Convertor, ModelConverter } from '../../helper/model-converter';
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
-import { Player } from 'model';
+import { Player } from '../../model';
 
 @Entity({ name: 'player' })
 @Convertor(Player, PlayerEntity)

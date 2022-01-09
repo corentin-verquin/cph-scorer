@@ -6,15 +6,15 @@ import {
   NotFoundException,
   Put,
 } from '@nestjs/common';
-import { RankingService, TeamService } from 'service';
+import { RankingService, TeamService } from '../../service';
 import {
   ApiNoContentResponse,
   ApiNotFoundResponse,
   ApiTags,
 } from '@nestjs/swagger';
-import { MatchUpdateDTO } from 'helper/DTO/match-update.dto';
-import { UpdateScore } from 'core/update-score';
-import { PlayerUnknowException } from 'error';
+import { MatchUpdateDTO } from '../../helper/DTO/match-update.dto';
+import { UpdateScore } from '../../core/update-score';
+import { PlayerUnknowException } from '../../error';
 
 @Controller('match')
 @ApiTags('Tournament')

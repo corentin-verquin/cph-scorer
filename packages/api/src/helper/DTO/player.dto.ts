@@ -1,4 +1,4 @@
-import { Player } from 'model';
+import { Player } from '../../model';
 import { ApiProperty } from '@nestjs/swagger';
 import { IsBoolean, IsNotEmpty, IsUUID } from 'class-validator';
 
