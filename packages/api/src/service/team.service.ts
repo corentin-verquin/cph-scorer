@@ -12,11 +12,7 @@ export class TeamService implements TeamProvider {
   ) {}
 
   public async insert(players: Player[]): Promise<Team> {
-    const playerEntity = players.map((x) => {
-      const p = new PlayerEntity();
-      p.fromModel(x);
-      return p;
-    });
+    const playerEntity = players.map((x) => new PlayerEntity().fromModel(x));
 
     const team = new TeamEntity();
     team.players = playerEntity;

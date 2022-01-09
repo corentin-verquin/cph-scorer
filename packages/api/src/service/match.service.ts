@@ -20,13 +20,10 @@ export class MatchService implements MatchProvider {
 
   public async insert(teams: Team[], round: Round): Promise<Match> {
     const match = new MatchEntity();
-    const roundEntity = new RoundEntity();
-    roundEntity.fromModel(round);
+    const roundEntity = new RoundEntity().fromModel(round);
 
-    const team1 = new TeamEntity();
-    team1.fromModel(teams[0]);
-    const team2 = new TeamEntity();
-    team2.fromModel(teams[1]);
+    const team1 = new TeamEntity().fromModel(teams[0]);
+    const team2 = new TeamEntity().fromModel(teams[1]);
 
     match.round = roundEntity;
     match.teamOne = team1;

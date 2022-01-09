@@ -76,8 +76,7 @@ export class RankingService implements RankingProvider {
     type: RankingType,
   ): Promise<Ranking> {
     const ranking = new RankingEntity();
-    const playerEntity = new PlayerEntity();
-    playerEntity.fromModel(player);
+    const playerEntity = new PlayerEntity().fromModel(player as Player);
 
     ranking.type = type;
     ranking.players = [playerEntity];
