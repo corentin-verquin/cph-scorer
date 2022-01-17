@@ -19,6 +19,7 @@
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
     "test:e2e": "jest --runInBand --coverageDirectory .tmp_coverage/e2e test/e2e",
+    "test:unit": "jest --coverageDirectory .tmp_coverage/unit --collectCoverageFrom=src/core/*.ts test/unit",
     "pre-commit": "yarn format",
     "compile": "tsc -b --verbose"
   },
@@ -30,6 +31,7 @@
     "@nestjs/typeorm": "^8.0.1",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.13.1",
+    "jest-mock-extended": "^2.0.4",
     "pg": "^8.6.0",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",

@@ -7,7 +7,7 @@ export class UpdateScore {
     private readonly teamProvider: TeamProvider,
   ) {}
 
-  public async exec(match: Match, type: RankingType): Promise<void> {
+  public async execute(match: Match, type: RankingType): Promise<void> {
     await Promise.all([
       this.teamProvider.update(match.teamOne.id, match.teamOne.score),
       this.teamProvider.update(match.teamTwo.id, match.teamTwo.score),

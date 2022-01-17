@@ -32,7 +32,7 @@ export class MatchController {
     const useCase = new UpdateScore(this.rankingService, this.teamService);
 
     try {
-      await useCase.exec(match, type);
+      await useCase.execute(match, type);
     } catch (e) {
       if (e instanceof PlayerUnknowException) {
         throw new NotFoundException('Invalid user');

@@ -88,7 +88,7 @@ export class PlayerController {
     const useCase = new RegisterPlayer(this.playerService, this.rankingService);
 
     try {
-      await useCase.exec(data.id, data.type);
+      await useCase.execute(data.id, data.type);
     } catch (e) {
       if (e instanceof PlayerUnknowException) {
         throw new NotFoundException('Invalid user');

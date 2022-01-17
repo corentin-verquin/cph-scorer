@@ -8,7 +8,7 @@ export class RegisterPlayer {
     private readonly rankingProvider: RankingProvider,
   ) {}
 
-  public async exec(id: uuid, type: RankingType): Promise<void> {
+  public async execute(id: uuid, type: RankingType): Promise<void> {
     let idRanking: uuid;
     const player: Player = await this.playerProdvider.update(id, {
       register: true,

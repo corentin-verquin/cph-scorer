@@ -8,7 +8,7 @@ export class Reset {
   ) {}
 
   public async execute(): Promise<void> {
-    const players = await this.playerProvider.list();
+    const players = await this.playerProvider.listRegister();
 
     await Promise.all(
       players.map(async (player) => {

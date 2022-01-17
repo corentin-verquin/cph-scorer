@@ -18,7 +18,7 @@ export class GenerateRound {
     private readonly matchProvider: MatchProvider,
   ) {}
 
-  public async exec(numberOfRound: number): Promise<void> {
+  public async execute(numberOfRound: number): Promise<void> {
     const register = await this.playerProvider.listRegister();
     const rounds = await lastValueFrom(
       this.generate(numberOfRound, register).pipe(retry(5)),

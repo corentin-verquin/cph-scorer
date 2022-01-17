@@ -52,7 +52,7 @@ export class RoundController {
     );
 
     try {
-      await useCase.exec(numberOfRound);
+      await useCase.execute(numberOfRound);
     } catch (e) {
       if (e instanceof MaxCallError) throw new ConflictException(e.message);
       throw new InternalServerErrorException(e);
@@ -66,7 +66,7 @@ export class RoundController {
     const useCase = new GetRound(this.roundService);
 
     try {
-      return await useCase.exec(round);
+      return await useCase.execute(round);
     } catch (e) {
       if (e instanceof EntityNotFoundError) {
         throw new NotFoundException('Invalid round');

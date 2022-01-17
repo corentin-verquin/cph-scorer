@@ -19,6 +19,6 @@ export class RankingController {
   async get(@Param() { type }: TypeDTO): Promise<Ranking[]> {
     const useCase = new GetRanking(this.rankingService);
 
-    return await useCase.exec(type);
+    return await useCase.execute(type);
   }
 }
