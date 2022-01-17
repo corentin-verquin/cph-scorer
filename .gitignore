@@ -61,3 +61,4 @@ dist/
 .cache/
 tests_output/
 .tmp_coverage/
+merged-output
