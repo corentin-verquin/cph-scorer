@@ -21,16 +21,13 @@ connect-db:
 	docker run -e PGPASSWORD='psql' --net 'cphscorer_dbnet' -it --rm  postgres:13.0-alpine psql -h 192.168.5.5 -d psql -U psql
 
 compile:
-	lerna run compile
+	npx lerna run compile
 
-format:
-	lerna run format
-
-test:
-	lerna run test
+lint:
+	npx lerna run lint
 
 e2e-test:
-	lerna run --scope '@cph-scorer/e2e-test' start -- -e $(BROWSER)
+	npx lerna run --scope '@cph-scorer/e2e-test' start -- -e $(BROWSER)
 
 import:
 	npx ts-node --project packages/database-provider/tsconfig.json -p -e "import connection from './packages/database-provider/__test__/connection';connection.create().then(()=> {connection.close().then(() => console.log('ok'))})"

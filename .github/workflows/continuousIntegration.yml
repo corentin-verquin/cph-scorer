@@ -1,0 +1,164 @@
+name: Continuous Integration
+
+on: [push]
+
+jobs:
+  install-dependencies:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Setup node env
+        uses: actions/setup-node@v2.1.4
+        with:
+          node-version: 16
+
+      - name: Checkout
+        uses: actions/checkout@main
+
+      - name: Cache node modules
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: node_modules-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            node_modules-
+
+      - name: Install dependencies
+        run: yarn ci
+
+
+
+  lint-and-compile:
+    needs: install-dependencies
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Setup node env
+        uses: actions/setup-node@v2.1.4
+        with:
+          node-version: 16
+
+      - name: Checkout
+        uses: actions/checkout@main
+
+      - name: Load node_modules
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: node_modules-${{ hashFiles('yarn.lock') }}
+
+      - run: yarn ci
+
+      - name: Run linter
+        run: make lint
+
+      - name: Run compile
+        run: make compile
+
+  api-unit-test:
+    needs: install-dependencies
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Setup node env
+        uses: actions/setup-node@v2.1.4
+        with:
+          node-version: 16
+
+      - name: Checkout
+        uses: actions/checkout@main
+
+      - name: Load node_modules
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: node_modules-${{ hashFiles('yarn.lock') }}
+
+      - run: yarn ci
+
+      - name: Run tests
+        run: npx lerna exec --scope '@cph-scorer/api' -- yarn test:unit
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: unit-coverage
+          path: packages/api/.tmp_coverage/unit/coverage-final.json
+          retention-days: 1
+
+  api-e2e-test:
+    needs: install-dependencies
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Setup node env
+        uses: actions/setup-node@v2.1.4
+        with:
+          node-version: 16
+
+      - name: Setup database
+        uses: harmon758/postgresql-action@v1
+        with:
+          postgresql version: '13.0-alpine'
+          postgresql db: 'psql'
+          postgresql user: 'psql'
+          postgresql password: 'psql'
+
+      - name: Checkout
+        uses: actions/checkout@main
+
+      - name: Load node_modules
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: node_modules-${{ hashFiles('yarn.lock') }}
+
+      - run: yarn ci
+
+      - name: Run tests
+        run: npx lerna exec --scope '@cph-scorer/api' -- yarn test:e2e
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: e2e-coverage
+          path: packages/api/.tmp_coverage/e2e/coverage-final.json
+          retention-days: 1
+
+  generate-coverage:
+    needs: [install-dependencies, api-e2e-test, api-unit-test]
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Setup node env
+        uses: actions/setup-node@v2.1.4
+        with:
+          node-version: 16
+
+      - name: Checkout
+        uses: actions/checkout@main
+
+      - name: Load node_modules
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: node_modules-${{ hashFiles('yarn.lock') }}
+
+      - run: yarn ci
+
+      - uses: actions/download-artifact@v2
+        with:
+          name: unit-coverage
+          path: packages/api/.tmp_coverage/unit.json
+
+      - uses: actions/download-artifact@v2
+        with:
+          name: e2e-coverage
+          path: packages/api/.tmp_coverage/e2e.json
+
+      - name: merge coverage
+        run: npx lerna exec --scope '@cph-scorer/api' -- npx nyc merge .tmp_coverage merged-output/merged-coverage.json
+
+      - name: generate coverage
+        run: npx lerna exec --scope '@cph-scorer/api' -- npx nyc report -t merged-output --report-dir coverage --reporter=lcov
+
+      - name: upload coverage
+        run:  npx codecov --token=${{ secrets.CODECOV_TOKEN }}
