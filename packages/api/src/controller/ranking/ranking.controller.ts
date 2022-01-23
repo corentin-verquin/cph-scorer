@@ -3,13 +3,22 @@ import { ApiOkResponse, ApiTags } from '@nestjs/swagger';
 import { GetRanking } from '../../core/get-ranking';
 import { RankingDTO } from '../../helper/DTO/ranking.dto';
 import { TypeDTO } from '../../helper/DTO/type.dto';
-import { Ranking } from '../../model';
+import { Ranking, RankingType } from '../../model';
 import { RankingService } from '../../service';
 
 @Controller('ranking')
 @ApiTags('Tournament')
 export class RankingController {
   constructor(private readonly rankingService: RankingService) {}
+
+  @Get('/type')
+  @ApiOkResponse({
+    description: 'Return all type of ranking',
+    type: [String],
+  })
+  getType(): String[] {
+    return Object.keys(RankingType).filter((x) => isNaN(x as any));
+  }
 
   @Get('/:type')
   @ApiOkResponse({

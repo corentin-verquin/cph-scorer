@@ -34,4 +34,14 @@ describe('Ranking Controller', () => {
 
     expect(body.length).toBe(2)
   })
+
+  it('GET /ranking/type', async () => {
+    const { body } = await request(app.getHttpServer())
+      .get(`/ranking/type`)
+      .set('Accept', 'application/json')
+      .expect('Content-Type', /json/)
+      .expect(200)
+
+    expect(body).toStrictEqual(['SEN', 'VET', 'FEM'])
+  })
 })
