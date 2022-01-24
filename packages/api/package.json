@@ -17,7 +17,7 @@
     "start": "nest start",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
-    "start:prod": "node dist/main",
+    "start:prod": "node dist/src/main/",
     "start:with-import": "NEED_IMPORT=true nest start",
     "test:e2e": "jest --runInBand --coverageDirectory .tmp_coverage/e2e test/e2e",
     "test:unit": "jest --coverageDirectory .tmp_coverage/unit --collectCoverageFrom=src/core/*.ts test/unit",
