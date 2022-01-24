@@ -29,8 +29,5 @@ lint:
 e2e-test:
 	npx lerna run --scope '@cph-scorer/e2e-test' start -- -e $(BROWSER)
 
-import:
-	npx ts-node --project packages/database-provider/tsconfig.json -p -e "import connection from './packages/database-provider/__test__/connection';connection.create().then(()=> {connection.close().then(() => console.log('ok'))})"
-
 rebuild-image:
 	docker-compose build

@@ -18,6 +18,7 @@
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
+    "start:with-import": "NEED_IMPORT=true nest start",
     "test:e2e": "jest --runInBand --coverageDirectory .tmp_coverage/e2e test/e2e",
     "test:unit": "jest --coverageDirectory .tmp_coverage/unit --collectCoverageFrom=src/core/*.ts test/unit",
     "test:mutation": "stryker run",
