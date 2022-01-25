@@ -16,3 +16,33 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: cph-scorer-api
           heroku_email: corentin.verquin@gmail.com
+
+  deploy-client:
+    needs: [deploy-api]
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@main
+
+      - name: Setup node env
+        uses: actions/setup-node@v2.1.4
+        with:
+          node-version: 16
+
+      - run: npm i -g netlify-cli
+
+      - run: npm i
+        working-directory: packages/client
+
+      - name: Make envfile
+        run: |
+          touch .env
+          echo 'ENDPOINT="${{ secrets.API_URL }}"' >> .env
+        working-directory: packages/client
+
+      - name: Deploy Client
+        run: netlify deploy --build -s ${{ secrets.NETLIFY_SITE_ID }} --prod
+        working-directory: packages/client
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
