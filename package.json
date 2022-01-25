@@ -1,9 +1,14 @@
 {
   "name": "cph-scorer",
+  "license": "MIT",
   "private": true,
   "workspaces": [
     "packages/**/*"
   ],
+  "engines": {
+    "node": "16.x",
+    "npm": "8.x"
+  },
   "devDependencies": {
     "@commitlint/config-conventional": "^16.0.0",
     "@ls-lint/ls-lint": "^1.10.0",

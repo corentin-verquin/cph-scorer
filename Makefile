@@ -1,6 +1,6 @@
 .DEFAULT_GOAL:up-dev-env
 
-.PHONY: up-dev-env down-dev-env connect-db connect-db-keycloak compile format test import rebuild-image e2e-test
+.PHONY: up-dev-env down-dev-env connect-db compile lint rebuild-image e2e-test
 
 CURRENT_GID := $(shell id -u)
 CURRENT_UID := $(shell id -g)
@@ -25,6 +25,7 @@ compile:
 
 lint:
 	npx lerna run lint
+	npx ls-lint
 
 e2e-test:
 	npx lerna run --scope '@cph-scorer/e2e-test' start -- -e $(BROWSER)
