@@ -1,9 +1,41 @@
-name: 'Deploy'
+name: 'Release and Deploy'
 
 on: workflow_dispatch
 
 jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      HUSKY: 0
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@main
+
+      - name: Setup node env
+        uses: actions/setup-node@v2.1.4
+        with:
+          node-version: 16
+
+      - name: Configure Git user
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+
+      - name: Create release 🏗
+        uses: cycjimmy/semantic-release-action@v2.5.4
+        id: semantic-release
+        with:
+          semantic_version: 18.0.0
+          extra_plugins: |
+            @semantic-release/changelog@6.0.1
+            @semantic-release/git@10.0.1
+            @semantic-release/exec@6.0.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
   deploy-api:
+    needs: [release]
     runs-on: ubuntu-latest
 
     steps:
