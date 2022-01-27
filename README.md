@@ -1,11 +1,17 @@
-# CPH Scorer
+# CPH Scorer ![](https://img.shields.io/maintenance/yes/2022) ![](https://img.shields.io/github/commit-activity/m/corentin-verquin/cph-scorer) ![](https://img.shields.io/github/v/release/corentin-verquin/cph-scorer) ![](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-![](https://github.com/corentin-verquin/cph-scorer/actions/workflows/continuousIntegration.yml/badge.svg)[![codecov](https://codecov.io/gh/corentin-verquin/cph-scorer/branch/master/graph/badge.svg?token=TT4TPQE2Y9)](https://codecov.io/gh/corentin-verquin/cph-scorer)
-![](https://img.shields.io/maintenance/yes/2022)
-![](https://img.shields.io/github/commit-activity/m/corentin-verquin/cph-scorer)
-![license MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![](https://github.com/corentin-verquin/cph-scorer/actions/workflows/continuousIntegration.yml/badge.svg)
+[![codecov](https://codecov.io/gh/corentin-verquin/cph-scorer/branch/master/graph/badge.svg?token=TT4TPQE2Y9)](https://codecov.io/gh/corentin-verquin/cph-scorer)
 
-## Technology
+## Table of content
+* [Technologies](#technologies)
+* [Install](#install)
+* [Usage](#usage)
+* [Author](#author)
+* [License](#license)
+* [Hosting](#hosting)
+
+## Technologies
 ![](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
 ![](https://img.shields.io/badge/YARN-2C8EBB?style=for-the-badge&logo=yarn&logoColor=white)
 ![](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
