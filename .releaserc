@@ -1,0 +1,29 @@
+{
+    "tagFormat": "v${version}",
+    "repositoryUrl": "https://github.com/corentin-verquin/cph-scorer.git",
+    "plugins": [
+        "@semantic-release/commit-analyzer",
+        "@semantic-release/release-notes-generator",
+        "@semantic-release/changelog",
+        [
+            "@semantic-release/exec",
+            {
+                "prepareCmd": "lerna version --no-push --no-git-tag-version ${nextRelease.version} --yes"
+            }
+        ],
+        [
+            "@semantic-release/git",
+            {
+                "assets": [
+                    "packages/api/package.json",
+                    "packages/client/package.json",
+                    "lerna.json",
+                    "CHANGELOG.md"
+                ],
+                "message": "chore(release): ${nextRelease.version}\n\n${nextRelease.notes}"
+            }
+        ],
+        "@semantic-release/github"
+    ],
+    "branches": "master"
+}
