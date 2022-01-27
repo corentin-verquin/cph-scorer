@@ -3,6 +3,7 @@
 ![](https://github.com/corentin-verquin/cph-scorer/actions/workflows/continuousIntegration.yml/badge.svg)
 [![codecov](https://codecov.io/gh/corentin-verquin/cph-scorer/branch/master/graph/badge.svg?token=TT4TPQE2Y9)](https://codecov.io/gh/corentin-verquin/cph-scorer)
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fcorentin-verquin%2Fcph-scorer.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fcorentin-verquin%2Fcph-scorer?ref=badge_shield)
+[![CodeFactor](https://www.codefactor.io/repository/github/corentin-verquin/cph-scorer/badge)](https://www.codefactor.io/repository/github/corentin-verquin/cph-scorer)
 
 ## Table of content
 * [Technologies](#technologies)
