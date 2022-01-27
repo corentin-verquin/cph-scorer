@@ -1,10 +1,9 @@
-@use "./vendor/bootstrap";
-@use "./vendor/font";
-@use "./layout/index";
+@use './vendor/bootstrap';
+@use './vendor/font';
+@use './layout/index';
 
-@import "../../components/navbar/navbar";
-@import "../../components/register-input/register-input";
-@import "../../components/register/register";
-@import "../../components/match/match";
-
-@import "./layout/print";
+@import '../../components/navbar/navbar';
+@import '../../components/register-input/register-input';
+@import '../../components/register/register';
+@import '../../components/match/match';
+@import './layout/print';
