@@ -3,7 +3,14 @@ include ../modal/modal.pug
 
 div(x-data="registerInput")
   +card
-    form.js-register-form(@submit="submit($event)")
+    .d-flex.flex-column.js-skeleton(style="row-gap: 10px")
+      .skeleton-box(style="width: 140px; height: 24px")
+      .skeleton-box(style="width: 100%; height: 38px")
+      .d-flex.justify-content-between.align-items-end
+        .skeleton-box(style="width: 204px; height: 24px")
+        .skeleton-box(style="width: 81px; height: 38px")
+
+    form.js-register-form.js-skeleton-show.d-none(@submit="submit($event)")
       label.form-label(for="playerList") Ajouter un joueur
       input#playerList.form-control(
         list="datalistOptions",
@@ -14,7 +21,7 @@ div(x-data="registerInput")
       .invalid-feedback Le champ est obligatoire
       datalist#datalistOptions
         template(x-for="p in player")
-          option(:value="`${p.firstName} - ${p.lastName}`", :data-id="p.id") 
+          option(:value="`${p.firstName} - ${p.lastName}`", :data-id="p.id")
       .d-flex.justify-content-between.align-items-end.mt-3
         div
           template(x-for="rank in rankingType")
@@ -29,7 +36,7 @@ div(x-data="registerInput")
               label.form-check-label.register-input__radio-label(
                 :for="rank",
                 x-text="rank"
-              ) 
+              )
         button.btn.btn-primary(
           type="submit",
           @click="valid($event)",

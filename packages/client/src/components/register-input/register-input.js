@@ -21,6 +21,10 @@ export default function () {
       this.rankingType = await get(RANKING.READTYPE);
       const data = await get(PLAYER.READ);
       this.player.push(...data);
+      document.querySelectorAll(".js-skeleton").forEach((x) => x.remove());
+      document
+        .querySelectorAll(".js-skeleton-show.d-none")
+        .forEach((x) => x.classList.remove("d-none"));
     },
 
     async submit(event) {

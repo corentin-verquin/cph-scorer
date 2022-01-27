@@ -5,7 +5,7 @@ block variables
   - var page = 1;
 
 block srcipt
-  script(src="../static/js/round.js", defer) 
+  script(src="../static/js/round.js", defer)
 
 block content
   ul.nav.nav-tabs.print-btn__container(x-data="round")
@@ -22,6 +22,12 @@ block content
 
   div(x-data="match")
     .row.justify-content-center.justify-content-lg-start
+      .col.col-11.col-lg-3.print-col.js-skeleton
+        .skeleton-box.match(style="width: 100%; height: 133px")
+      .col.col-11.col-lg-3.print-col.js-skeleton
+        .skeleton-box.match(style="width: 100%; height: 133px")
+      .col.col-11.col-lg-3.print-col.js-skeleton
+        .skeleton-box.match(style="width: 100%; height: 133px")
       template(x-for="(match, index) in $store.RoundStore.round.matchs")
         .col.col-11.col-lg-3.print-col
           include ../components/match/match.pug

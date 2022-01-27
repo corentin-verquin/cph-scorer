@@ -23,6 +23,7 @@ function loadPage() {
     async init() {
       const data = await get(ROUND.READ(this.selectedRound));
       Alpine.store("RoundStore").create(data);
+      document.querySelectorAll(".js-skeleton").forEach((x) => x.remove());
     },
 
     async changeSelected({ target }) {
