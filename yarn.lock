@@ -1240,12 +1240,12 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@fullhuman/postcss-purgecss@3.1.3":
-  version "3.1.3"
-  resolved "https://registry.yarnpkg.com/@fullhuman/postcss-purgecss/-/postcss-purgecss-3.1.3.tgz#47af7b87c9bfb3de4bc94a38f875b928fffdf339"
-  integrity sha512-kwOXw8fZ0Lt1QmeOOrd+o4Ibvp4UTEBFQbzvWldjlKv5n+G9sXfIPn1hh63IQIL8K8vbvv1oYMJiIUbuy9bGaA==
+"@fullhuman/postcss-purgecss@4.1.3":
+  version "4.1.3"
+  resolved "https://registry.yarnpkg.com/@fullhuman/postcss-purgecss/-/postcss-purgecss-4.1.3.tgz#e4eb21fc7a49257e4081c6a3a86b338618e61fce"
+  integrity sha512-jqcsyfvq09VOsMXxJMPLRF6Fhg/NNltzWKnC9qtzva+QKTxerCO4esG6je7hbnmkpZtaDyPTwMBj9bzfWorsrw==
   dependencies:
-    purgecss "^3.1.3"
+    purgecss "^4.1.3"
 
 "@gar/promisify@^1.0.1":
   version "1.1.2"
@@ -4770,12 +4770,7 @@ commander@^5.0.0:
   resolved "https://registry.yarnpkg.com/commander/-/commander-5.1.0.tgz#46abbd1652f8e059bddaef99bbdcb2ad9cf179ae"
   integrity sha512-P0CysNDQ7rtVw4QIQtm+MRxV66vKFSvlsQvGYXZWR3qFU0jlMKHZZZgw8e+8DSah4UDKMqnknRDQz+xuQXQ/Zg==
 
-commander@^6.0.0:
-  version "6.2.1"
-  resolved "https://registry.yarnpkg.com/commander/-/commander-6.2.1.tgz#0792eb682dfbc325999bb2b84fddddba110ac73c"
-  integrity sha512-U7VdrJFnJgo4xjrHpTzu0yrHPGImdsmD95ZlgYSEajAn2JKzDhDTPG9kBTefmObL2w/ngeZnilk+OV9CG3d7UA==
-
-commander@~8.3.0:
+commander@^8.0.0, commander@~8.3.0:
   version "8.3.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-8.3.0.tgz#4837ea1b2da67b9c616a67afbb0fafee567bca66"
   integrity sha512-OkTL9umf+He2DZkUq8f8J9of7yL6RJKI24dVITBmNfZBmri9zYZQrKkuXiKhyfPSu8tUhnVBB1iKXevvnlR4Ww==
@@ -7182,7 +7177,7 @@ glob@7.1.3:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
-glob@^7.0.0, glob@^7.0.3, glob@^7.1.1, glob@^7.1.2, glob@^7.1.3, glob@^7.1.4, glob@^7.1.6, glob@~7.2.0:
+glob@^7.0.0, glob@^7.0.3, glob@^7.1.1, glob@^7.1.2, glob@^7.1.3, glob@^7.1.4, glob@^7.1.6, glob@^7.1.7, glob@~7.2.0:
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/glob/-/glob-7.2.0.tgz#d15535af7732e02e948f4c41628bd910293f6023"
   integrity sha512-lmLf6gtyrPq8tTjSmrO94wBeQbFR3HbLHbuyD69wuyQkImp2hWqMGB47OX65FBkPffO641IP9jWa1z4ivqG26Q==
@@ -11674,7 +11669,7 @@ postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.11, postcss@^7.0.17, postcss@^7.0.2
     picocolors "^0.2.1"
     source-map "^0.6.1"
 
-postcss@^8.2.1, postcss@^8.3.11, postcss@^8.4.5:
+postcss@^8.3.11, postcss@^8.3.5, postcss@^8.4.5:
   version "8.4.5"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.5.tgz#bae665764dfd4c6fcc24dc0fdf7e7aa00cc77f95"
   integrity sha512-jBDboWM8qpaqwkMwItqTQTiFikhs/67OYVvblFFTM7MrZjt6yMKd6r2kgXizEbTTljacm4NldIlZnhbjr84QYg==
@@ -12067,15 +12062,15 @@ purgecss@^2.3.0:
     postcss "7.0.32"
     postcss-selector-parser "^6.0.2"
 
-purgecss@^3.1.3:
-  version "3.1.3"
-  resolved "https://registry.yarnpkg.com/purgecss/-/purgecss-3.1.3.tgz#26987ec09d12eeadc318e22f6e5a9eb0be094f41"
-  integrity sha512-hRSLN9mguJ2lzlIQtW4qmPS2kh6oMnA9RxdIYK8sz18QYqd6ePp4GNDl18oWHA1f2v2NEQIh51CO8s/E3YGckQ==
+purgecss@^4.1.3:
+  version "4.1.3"
+  resolved "https://registry.yarnpkg.com/purgecss/-/purgecss-4.1.3.tgz#683f6a133c8c4de7aa82fe2746d1393b214918f7"
+  integrity sha512-99cKy4s+VZoXnPxaoM23e5ABcP851nC2y2GROkkjS8eJaJtlciGavd7iYAw2V84WeBqggZ12l8ef44G99HmTaw==
   dependencies:
-    commander "^6.0.0"
-    glob "^7.0.0"
-    postcss "^8.2.1"
-    postcss-selector-parser "^6.0.2"
+    commander "^8.0.0"
+    glob "^7.1.7"
+    postcss "^8.3.5"
+    postcss-selector-parser "^6.0.6"
 
 q@^1.1.2, q@^1.5.1:
   version "1.5.1"
