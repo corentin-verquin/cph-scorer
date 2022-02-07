@@ -3,7 +3,7 @@
   "version": "1.0.0-alpha.0",
   "author": "corentin-verquin",
   "devDependencies": {
-    "chromedriver": "^96.0.0",
+    "chromedriver": "^97.0.4",
     "geckodriver": "^2.0.4",
     "nightwatch": "^1.7.11"
   },
