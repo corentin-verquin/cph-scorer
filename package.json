@@ -10,7 +10,7 @@
     "npm": "8.x"
   },
   "devDependencies": {
-    "@commitlint/config-conventional": "^16.0.0",
+    "@commitlint/config-conventional": "^17.0.3",
     "@ls-lint/ls-lint": "^1.10.0",
     "codecov": "^3.8.3",
     "commitlint": "^16.0.1",
