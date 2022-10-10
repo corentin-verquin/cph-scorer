@@ -5,7 +5,7 @@
   "devDependencies": {
     "chromedriver": "^96.0.0",
     "geckodriver": "^2.0.4",
-    "nightwatch": "^1.7.11"
+    "nightwatch": "^2.3.9"
   },
   "scripts": {
     "start": "nightwatch"
