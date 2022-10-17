@@ -3243,10 +3243,10 @@ add-stream@^1.0.0:
   resolved "https://registry.yarnpkg.com/add-stream/-/add-stream-1.0.0.tgz#6a7990437ca736d5e1288db92bd3266d5f5cb2aa"
   integrity sha1-anmQQ3ynNtXhKI25K9MmbV9csqo=
 
-adm-zip@0.5.5:
-  version "0.5.5"
-  resolved "https://registry.yarnpkg.com/adm-zip/-/adm-zip-0.5.5.tgz#b6549dbea741e4050309f1bb4d47c47397ce2c4f"
-  integrity sha512-IWwXKnCbirdbyXSfUDvCCrmYrOHANRZcc8NcRrvTlIApdl7PwE9oGcsYvNeJPAVY1M+70b4PxXGKIf8AEuiQ6w==
+adm-zip@0.5.9:
+  version "0.5.9"
+  resolved "https://registry.yarnpkg.com/adm-zip/-/adm-zip-0.5.9.tgz#b33691028333821c0cf95c31374c5462f2905a83"
+  integrity sha512-s+3fXLkeeLjZ2kLjCBwQufpI5fuN+kIGBxu6530nVQZGVol0d7Y/M88/xw9HGGUcJjKf8LutN3VPRUBq6N7Ajg==
 
 agent-base@6, agent-base@^6.0.0, agent-base@^6.0.2:
   version "6.0.2"
@@ -4206,7 +4206,7 @@ cacheable-lookup@^5.0.3:
   resolved "https://registry.yarnpkg.com/cacheable-lookup/-/cacheable-lookup-5.0.4.tgz#5a6b865b2c44357be3d5ebc2a467b032719a7005"
   integrity sha512-2/kNscPhpcxrOigMZzbiWF7dz8ilhb/nIHU3EyZiXWXpeq/au8qJ8VhdftMkty3n7Gj6HIGalQG8oiBNB3AJgA==
 
-cacheable-request@^7.0.1:
+cacheable-request@^7.0.2:
   version "7.0.2"
   resolved "https://registry.yarnpkg.com/cacheable-request/-/cacheable-request-7.0.2.tgz#ea0d0b889364a25854757301ca12b2da77f91d27"
   integrity sha512-pouW8/FmiPQbuGpkXQ9BAPv/Mo5xDGANgSNXzTzJ8DrKGuXOssM4wIQRjfanNRh3Yu5cfYPvcorqbhg2KIJtew==
@@ -6992,16 +6992,16 @@ gauge@~2.7.3:
     strip-ansi "^3.0.1"
     wide-align "^1.1.0"
 
-geckodriver@^2.0.4:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/geckodriver/-/geckodriver-2.0.4.tgz#2f644ede43ce7bea10336d57838179da0f7374d9"
-  integrity sha512-3Fu75v6Ov8h5Vt25+djJU56MJA2gRctgjhvG5xGzLFTQjltPz7nojQdBHbmgWznUt3CHl8VaiDn8MaepY7B0dA==
+geckodriver@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/geckodriver/-/geckodriver-3.1.0.tgz#8f9b6eb363f2b591dced72a036bb3c404f803d80"
+  integrity sha512-DjTHi3/E4heJF2aD2J+R8TYMjhjrOQh+AF77VsFgVRh7Jfq4d+nOoAu1rFm4MvJ1HPVpz+eE8d1NmB8qu+SylA==
   dependencies:
-    adm-zip "0.5.5"
+    adm-zip "0.5.9"
     bluebird "3.7.2"
-    got "11.8.2"
-    https-proxy-agent "5.0.0"
-    tar "6.1.9"
+    got "11.8.5"
+    https-proxy-agent "5.0.1"
+    tar "6.1.11"
 
 gensync@^1.0.0-beta.2:
   version "1.0.0-beta.2"
@@ -7273,17 +7273,17 @@ globjoin@^0.1.4:
   resolved "https://registry.yarnpkg.com/globjoin/-/globjoin-0.1.4.tgz#2f4494ac8919e3767c5cbb691e9f463324285d43"
   integrity sha1-L0SUrIkZ43Z8XLtpHp9GMyQoXUM=
 
-got@11.8.2:
-  version "11.8.2"
-  resolved "https://registry.yarnpkg.com/got/-/got-11.8.2.tgz#7abb3959ea28c31f3576f1576c1effce23f33599"
-  integrity sha512-D0QywKgIe30ODs+fm8wMZiAcZjypcCodPNuMz5H9Mny7RJ+IjJ10BdmGW7OM7fHXP+O7r6ZwapQ/YQmMSvB0UQ==
+got@11.8.5:
+  version "11.8.5"
+  resolved "https://registry.yarnpkg.com/got/-/got-11.8.5.tgz#ce77d045136de56e8f024bebb82ea349bc730046"
+  integrity sha512-o0Je4NvQObAuZPHLFoRSkdG2lTgtcynqymzg2Vupdx6PorhaT5MCbIyXG6d4D94kk8ZG57QeosgdiqfJWhEhlQ==
   dependencies:
     "@sindresorhus/is" "^4.0.0"
     "@szmarczak/http-timer" "^4.0.5"
     "@types/cacheable-request" "^6.0.1"
     "@types/responselike" "^1.0.0"
     cacheable-lookup "^5.0.3"
-    cacheable-request "^7.0.1"
+    cacheable-request "^7.0.2"
     decompress-response "^6.0.0"
     http2-wrapper "^1.0.0-beta.5.2"
     lowercase-keys "^2.0.0"
@@ -7624,10 +7624,10 @@ https-browserify@^1.0.0:
   resolved "https://registry.yarnpkg.com/https-browserify/-/https-browserify-1.0.0.tgz#ec06c10e0a34c0f2faf199f7fd7fc78fffd03c73"
   integrity sha1-7AbBDgo0wPL68Zn3/X/Hj//QPHM=
 
-https-proxy-agent@5, https-proxy-agent@5.0.0, https-proxy-agent@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/https-proxy-agent/-/https-proxy-agent-5.0.0.tgz#e2a90542abb68a762e0a0850f6c9edadfd8506b2"
-  integrity sha512-EkYm5BcKUGiduxzSt3Eppko+PiNWNEpa4ySk9vTC6wDsQJW9rHSa+UhGNJoRYp7bz6Ht1eaRIa6QaJqO5rCFbA==
+https-proxy-agent@5, https-proxy-agent@5.0.1, https-proxy-agent@^5.0.0:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/https-proxy-agent/-/https-proxy-agent-5.0.1.tgz#c59ef224a04fe8b754f3db0063a25ea30d0005d6"
+  integrity sha512-dFcAjpTQFgoLMzC2VwU+C/CbS7uRL0lWmxDITmqm7C+7F0Odmj6s9l6alZc6AELXhrnggM2CeWSXHGOdX2YtwA==
   dependencies:
     agent-base "6"
     debug "4"
@@ -13750,10 +13750,10 @@ tapable@^2.1.1, tapable@^2.2.0:
   resolved "https://registry.yarnpkg.com/tapable/-/tapable-2.2.1.tgz#1967a73ef4060a82f12ab96af86d52fdb76eeca0"
   integrity sha512-GNzQvQTOIP6RyTfE2Qxb8ZVlNmw0n88vp1szwWRimP02mnTsx3Wtn5qRdqY9w2XduFNUgvOwhNnQsjwCp+kqaQ==
 
-tar@6.1.9:
-  version "6.1.9"
-  resolved "https://registry.yarnpkg.com/tar/-/tar-6.1.9.tgz#5646ef51342ac55456b2466e44da810439978db1"
-  integrity sha512-XjLaMNl76o07zqZC/aW4lwegdY07baOH1T8w3AEfrHAdyg/oYO4ctjzEBq9Gy9fEP9oHqLIgvx6zuGDGe+bc8Q==
+tar@6.1.11, tar@^6.0.2, tar@^6.1.0:
+  version "6.1.11"
+  resolved "https://registry.yarnpkg.com/tar/-/tar-6.1.11.tgz#6760a38f003afa1b2ffd0ffe9e9abbd0eab3d621"
+  integrity sha512-an/KZQzQUkZCkuoAA64hM92X0Urb6VpRhAFllDzz44U2mcD5scmT3zBc4VgVpkugF580+DQn8eAFSyoQt0tznA==
   dependencies:
     chownr "^2.0.0"
     fs-minipass "^2.0.0"
@@ -13774,18 +13774,6 @@ tar@^4.4.12:
     mkdirp "^0.5.5"
     safe-buffer "^5.2.1"
     yallist "^3.1.1"
-
-tar@^6.0.2, tar@^6.1.0:
-  version "6.1.11"
-  resolved "https://registry.yarnpkg.com/tar/-/tar-6.1.11.tgz#6760a38f003afa1b2ffd0ffe9e9abbd0eab3d621"
-  integrity sha512-an/KZQzQUkZCkuoAA64hM92X0Urb6VpRhAFllDzz44U2mcD5scmT3zBc4VgVpkugF580+DQn8eAFSyoQt0tznA==
-  dependencies:
-    chownr "^2.0.0"
-    fs-minipass "^2.0.0"
-    minipass "^3.0.0"
-    minizlib "^2.1.1"
-    mkdirp "^1.0.3"
-    yallist "^4.0.0"
 
 tcp-port-used@^1.0.1:
   version "1.0.2"
