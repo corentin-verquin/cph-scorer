@@ -2499,10 +2499,10 @@
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.2.tgz#830beaec4b4091a9e9398ac50f865ddea52186b9"
   integrity sha512-92FRmppjjqz29VMJ2dn+xdyXZBrMlE42AV6Kq6BwjWV7CNUW1hs2FtxSNLQE+gJhaZ6AAmYuO9y8dshhcBl7vA==
 
-"@prettier/plugin-pug@^1.17.1":
-  version "1.19.2"
-  resolved "https://registry.yarnpkg.com/@prettier/plugin-pug/-/plugin-pug-1.19.2.tgz#ac0d433b8decbfc8efc59498da8436fbe4b29099"
-  integrity sha512-Izo+m3pb15Ym7t3J+u22kun7bQXZOj+lAqkIc5ifxwd9En9OqcCShZz7eABORmzmY276IjSfY92Ijd23nLR68Q==
+"@prettier/plugin-pug@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@prettier/plugin-pug/-/plugin-pug-2.2.0.tgz#1794b1f27b34f9ef6e9519b8a64f2e5e73ad96eb"
+  integrity sha512-W5CIXtMauz6xB4b0TeBW1Jxtk2ArggKMwqDHdGOfQ9ahABsttg2YZoQgLytETuo8Gjq0QkaGhAGD1pfDaUOZUQ==
   dependencies:
     pug-lexer "^5.0.0"
 
