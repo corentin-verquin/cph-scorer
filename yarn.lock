@@ -2910,9 +2910,9 @@
     "@types/superagent" "*"
 
 "@types/validator@^13.7.0":
-  version "13.7.1"
-  resolved "https://registry.yarnpkg.com/@types/validator/-/validator-13.7.1.tgz#cdab1b4779f6b1718a08de89d92d2603b71950cb"
-  integrity sha512-I6OUIZ5cYRk5lp14xSOAiXjWrfVoMZVjDuevBYgQDYzZIjsf2CAISpEcXOkFAtpAHbmWIDLcZObejqny/9xq5Q==
+  version "13.7.8"
+  resolved "https://registry.yarnpkg.com/@types/validator/-/validator-13.7.8.tgz#1340c85e51d5deee03df95721c4ff5c28dae5ff8"
+  integrity sha512-HKayOBe2ThTcQykiycCQYf70Fvo0WaJEJdxxNjvX3D/mnC0IUAhMe6wsIb1wwthmjiqBAR3qGkEzHYx74MS2yw==
 
 "@types/yargs-parser@*":
   version "20.2.1"
