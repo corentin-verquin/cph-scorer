@@ -1,13 +1,13 @@
-import { Match } from '../../model';
+import { Match } from '../../model'
 
 export class Round {
-  public id: uuid;
+  public id: uuid
 
-  public roundNumber: number;
+  public roundNumber: number
 
-  public matchs: Match[];
+  public matchs: Match[]
 
-  constructor(props?: Partial<Round>) {
-    if (props != null) Object.assign(this, props);
+  constructor (props?: Partial<Round>) {
+    if (props != null) Object.assign(this, props)
   }
 }

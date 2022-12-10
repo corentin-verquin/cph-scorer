@@ -1,19 +1,19 @@
-import { Player, RankingType } from '../../model';
+import { Player, RankingType } from '../../model'
 
 export class Ranking {
-  public id: uuid;
+  public id: uuid
 
-  public participation: number;
+  public participation: number
 
-  public point: number;
+  public point: number
 
-  public goalAverage: number;
+  public goalAverage: number
 
-  public type: RankingType;
+  public type: RankingType
 
-  public players: Player[];
+  public players: Player[]
 
-  constructor(props?: Partial<Ranking>) {
-    if (props != null) Object.assign(this, props);
+  constructor (props?: Partial<Ranking>) {
+    if (props != null) Object.assign(this, props)
   }
 }

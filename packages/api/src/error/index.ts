@@ -1,2 +1,2 @@
-export * from './max-call-error';
-export * from './player-unknow';
+export * from './max-call-error'
+export * from './player-unknow'

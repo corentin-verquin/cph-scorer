@@ -1,5 +1,5 @@
 .match(:data-id="match.id", @click="setScore($event)")
-  .match__header(x-text="`Terrain ${area[index]}`")
+  .match__header(x-text="`Terrain ${area[index] || 'AT' }`")
   .match__body
     .match__team
       template(x-for="player in match.teamOne.players")

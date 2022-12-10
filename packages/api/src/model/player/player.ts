@@ -1,13 +1,13 @@
 export class Player {
-  public id: uuid;
+  public id: uuid
 
-  public firstName: string;
+  public firstName: string
 
-  public lastName: string;
+  public lastName: string
 
-  public register: boolean;
+  public register: boolean
 
-  constructor(props?: Partial<Player>) {
-    if (props !== null) Object.assign(this, props);
+  constructor (props?: Partial<Player>) {
+    if (props !== null) Object.assign(this, props)
   }
 }
