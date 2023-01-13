@@ -21,7 +21,7 @@ function loadComponent() {
 }
 
 function loadPage() {
-  const NUMBER_OF_ROUND = 5;
+  const NUMBER_OF_ROUND = 3;
 
   Alpine.data("index", () => ({
     buttonStartDisabled: false,
