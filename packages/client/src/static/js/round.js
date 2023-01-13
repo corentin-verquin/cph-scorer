@@ -18,7 +18,7 @@ function loadComponent() {
 function loadPage() {
   Alpine.data("round", () => ({
     selectedRound: 1,
-    numberTotalOfRound: 5,
+    numberTotalOfRound: 3,
 
     async init() {
       const data = await get(ROUND.READ(this.selectedRound));
