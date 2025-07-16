@@ -19,7 +19,7 @@ resource "aws_s3_bucket_public_access_block" "allow_public" {
 # ACM Certificate
 resource "aws_acm_certificate" "cert" {
   provider          = aws.us_east_1
-  domain_name       = "test.petanque-halluin.fr"
+  domain_name       = "scorer.petanque-halluin.fr"
   validation_method = "DNS"
 
   lifecycle {
@@ -47,7 +47,7 @@ resource "aws_cloudfront_distribution" "cdn" {
   is_ipv6_enabled     = true
   default_root_object = "index.html"
 
-  aliases = ["test.petanque-halluin.fr"]
+  aliases = ["scorer.petanque-halluin.fr"]
 
   default_cache_behavior {
     allowed_methods  = ["GET", "HEAD"]
